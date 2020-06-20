@@ -15,30 +15,30 @@
 </head>
 <body>
     <div class="header">
-	  	<nav class="navbar navbar-expand-lg ">
+	  	<nav class="navbar navbar-expand-lg " id="navbar">
             <a class="navbar-brand" href="#" style="font-size: 30px; font-weight: 500; line-height: 1.375em; letter-spacing: normal;">MEETIFY</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" onclick="navbar()">
+                <span class="navbar-toggler-icon"></span>
             </button>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
+                    <li style="text-align: center;" class="nav-item active" >
                         <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                     </li>
-                    <li class="nav-item">
+                    <li style="text-align: center;" class="nav-item">
                         <a class="nav-link" href="#">Features</a>
                     </li>
-                    <li class="nav-item">
+                    <li style="text-align: center;" class="nav-item">
                         <a class="nav-link" href="#">Signup</a>
                     </li>                    
-                    <li class="nav-item">
+                    <li style="text-align: center;" class="nav-item">
                         <a class="nav-link" href="#">Login</a>
                     </li>
                 </ul>
             </div>
         </nav>
-        <div class="header-image">
+        <div class="header-image" id="clip">
             <p>Coming Together is a <strong>Beginning</strong>, <br>Staying together is <strong>progress</strong>,<br> Working together is <strong>Success</strong>!!</p>
         </div>
     </div>
@@ -49,7 +49,7 @@
     </div>
 
     <hr>
-    <div class="discover first">
+    <div class="discover first" data-aos="fade-left">
         <div class="d-flex justify-content-end">
             <div class="section">
                 <h2>Discover New People</h2>
@@ -61,19 +61,19 @@
         </div> 
     </div>
     <hr>
-    <div class="discover left">
+    <div class="discover left aos-init aos-animate" data-aos="fade-right"  data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="400">
         <div class="d-flex justify-content-start">
             <div class="image">
                 <img src="./img/memories.jpg" class="pull-left" width="900" height="500" style="margin-right: 50px;"  alt="left-image">
             </div>
-            <div class="section">
+            <div class="section aos-init aos-animate" data-aos="fade-left"  data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="10000">
                 <h2>Make Memories that last forever</h2>
                 <p>Meetify helps you to create new memories that will last forever.</p>
             </div>
         </div>
     </div>
     <hr>
-    <div class="discover last">
+    <div class="discover last" data-aos="fade-left">
         <div class="d-flex justify-content-end">
             <div class="section">
                 <h2>Grow and Learn Together</h2>
@@ -92,6 +92,7 @@
                 <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                 <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
                 <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
             </ol>
             <div class="carousel-inner">
                 <div class="carousel-item active" data-interval="5000">
@@ -123,6 +124,9 @@
                         <p class="role">UI developer</p>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est quaerat tempora, voluptatum quas facere dolorum aut cumque nihil nulla harum nemo distinctio quam blanditiis dignissimos.</p>
                     </div>
+                </div>
+                <div class="carousel-item" data-interval="5000">
+                    <img class="d-block w-100" src="./img/discover-new-people.jpg" alt="Sixth slide">
                 </div>
             </div>
         </div>
@@ -164,5 +168,18 @@
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <!--AOS Library-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha256-pQBbLkFHcP1cy0C8IhoSdxlm0CtcH5yJ2ki9jjgR03c=" crossorigin="anonymous"></script>
+    <script>
+        function navbar(){
+            var x = document.getElementById('navbar');
+            x.style.height = "auto";
+            x.style.zIndex = "100";
+            x.style.position = "absolute";
+            x.style.width = "100%";
+            x.style.backgroundColor = "whitesmoke";
+        }
+    </script>
 </body>
 </html>

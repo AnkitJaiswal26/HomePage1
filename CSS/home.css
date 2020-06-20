@@ -34,8 +34,9 @@ hr{
 }
 
 .navbar{
-    height: 100px;
-    padding: 10px 50px;
+    height: 70px;
+    padding: 10px;
+    padding-left: 30px;
 }
 
 .navbar-toggler-icon {
@@ -280,8 +281,6 @@ hr{
         font-size: 23px!important;
         font-weight: bold;
         color: black;
-        z-index: 100;
-        transform: translateY(0);
     }
 
     .navbar-nav {
